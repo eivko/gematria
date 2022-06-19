@@ -1,161 +1,154 @@
 <!DOCTYPE html>
 <html lang="ru" prefix="og: https://ogp.me/ns#">
-  <head>
-    <meta charset="utf-8">
-	<title>Русская гематрия. Калькулятор. Парный счёт слов, имён и текстов для русского алфавита и латиницы</title>
-	<meta content="Русская гематрия. Калькулятор. Парный счёт слов, имён и текстов для русского алфавита и латиницы. Анализ смысла слов и фраз на основе числовых значений, входящих в них букв." name="description" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Евгений Ивко">
-
-    <meta name="application-name" content="Гематрия">
-    <meta name="apple-mobile-web-app-title" content="Гематрия">
-	
-    <link rel="stylesheet" href="./style.css" type="text/css" />
+<head>
+  <meta charset="utf-8">
+  <title>Русская гематрия. Калькулятор. Парный счёт слов, имён и текстов для русского алфавита и латиницы</title>
+  <meta content="Русская гематрия. Калькулятор. Парный счёт слов, имён и текстов для русского алфавита и латиницы. Анализ смысла слов и фраз на основе числовых значений, входящих в них букв." name="description" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Евгений Ивко">
+  <meta name="application-name" content="Гематрия">
+  <meta name="apple-mobile-web-app-title" content="Гематрия">
+  <link rel="stylesheet" href="./style.css" type="text/css" />
 </head>
 <body>
   <main class="content">
-  <div class="container">
-    <div>
-      <div><img class="app-logo" src="assets/img/logos/chislo.png" alt="Гематрия"></div>
-      <div>
-		    <h1>Гематрия</h1>
-		  </div>
-		</div>
-  <div>
-    <div>
-        <p><b>Русская гематрия.</b> Калькулятор. Счёт для слов, имён и текстов, написанных на русском и латинице. Анализ смысла слов и фраз на основе числовых значений, входящих в них букв. Числовые значения букв соответствуют их порядковому номеру в современном русском алфавите: А=1, Б=2, В=3... Ю=32, Я=33, а также для латиницы (английского): A=1, B=2, C=3...Y=25, Z=26. Можно вписывать числа. Чтобы отделить два числа, между ними должен стоять, как минимум, пробел или буква.</p>
- <form action="gematria" method="POST" id="chet"  class="mt-2 mb-2 underlined">
-  <textarea style="margin-bottom:0;width:100%;" rows="3" maxlength="137000" id="textchet" name="textsum" placeholder="Введите здесь имя, название, числа или любой текст на русском и латинице..."></textarea>
-  <label><input type="radio" class="mr-1" name="letters" value="1" checked> все</label>
-  <label><input type="radio" class="mr-1" name="letters" value="2"> согласные</label>
-  <label><input type="radio" class="mr-1" name="letters" value="3"> гласные</label>
-  <label><input type="radio" class="mr-1" name="letters" value="4"> только цифры</label>
-  <label><input type="radio" class="mr-1" name="letters" value="5"> только буквы</label>
-  <a href="gematria" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrows-rotate"></i></a>
-  </form>
-  <div class="rezz" style="padding:10px;border:solid 1px #ddd;border-top:solid 1px #4059A2;margin-bottom:20px;font-size:28px;">
-<div class="diff" style="font-size:12px;color:#777;margin:0 95px;"></div>
-<div id="done-chet">Гематрия: <b>Введите данные</b></div>
-</div>
-    </div>
-</div>
+    <div class="container">
+      <div class="app-header">
+        <img class="app-header__logo" src="./img/chislo.png" alt="Гематрия">
+        <h1 class="app-header__title">Гематрия</h1>
+      </div>
+      <div class="app-description">
+        <p>
+          <b>Русская гематрия.</b> Калькулятор. Счёт для слов, имён и текстов, написанных на русском и латинице.
+          Анализ смысла слов и фраз на основе числовых значений, входящих в них букв.
+          Числовые значения букв соответствуют их порядковому номеру в современном русском алфавите:
+          А=1, Б=2, В=3... Ю=32, Я=33, а также для латиницы (английского): A=1, B=2, C=3...Y=25, Z=26.
+          Можно вписывать числа. Чтобы отделить два числа, между ними должен стоять, как минимум,
+          пробел или буква.
+        </p>
+      </div>
+      <form class="app-form" action="" method="POST">
+        <textarea rows="3" maxlength="144000" id="textchet" name="textsum" placeholder="Введите здесь имя, название, числа или любой текст на русском и латинице..."></textarea>
+        <label><input type="radio" class="mr-1" name="letters" value="1" checked> все</label>
+        <label><input type="radio" class="mr-1" name="letters" value="2"> согласные</label>
+        <label><input type="radio" class="mr-1" name="letters" value="3"> гласные</label>
+        <label><input type="radio" class="mr-1" name="letters" value="4"> только цифры</label>
+        <label><input type="radio" class="mr-1" name="letters" value="5"> только буквы</label>
+        <a href="./"><i class="fa-solid fa-arrows-rotate"></i></a>
+      </form>
+      <div id="done-chet">Гематрия: <b>Введите данные</b></div>
 
-<div class="row">
-    <div class="col-12">
-        <div class="table-responsive">
-           <table class="w-100 table table-bordered text-center">
-            <tr>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>8</th>
-                <th>9</th>
-                <th>10</th>
-                <th>11</th>
-                <th>12</th>
-                <th>13</th>
-                <th>14</th>
-                <th>15</th>
-                <th>16</th>
-                <th>17</th>
-                <th>18</th>
-                <th>19</th>
-                <th>20</th>
-                <th>21</th>
-                <th>22</th>
-                <th>23</th>
-                <th>24</th>
-                <th>25</th>
-                <th>26</th>
-                <th>27</th>
-                <th>28</th>
-                <th>29</th>
-                <th>30</th>
-                <th>31</th>
-                <th>32</th>
-                <th>33</th>
-            </tr>
-            <tr>
-                <td>А</td>
-                <td>Б</td>
-                <td>В</td>
-                <td>Г</td>
-                <td>Д</td>
-                <td>Е</td>
-                <td>Ё</td>
-                <td>Ж</td>
-                <td>З</td>
-                <td>И</td>
-                <td>Й</td>
-                <td>К</td>
-                <td>Л</td>
-                <td>М</td>
-                <td>Н</td>
-                <td>О</td>
-                <td>П</td>
-                <td>Р</td>
-                <td>С</td>
-                <td>Т</td>
-                <td>У</td>
-                <td>Ф</td>
-                <td>Х</td>
-                <td>Ц</td>
-                <td>Ч</td>
-                <td>Ш</td>
-                <td>Щ</td>
-                <td>Ъ</td>
-                <td>Ы</td>
-                <td>Ь</td>
-                <td>Э</td>
-                <td>Ю</td>
-                <td>Я</td>
-            </tr>
-            <tr>
-                <td>A</td>
-                <td>B</td>
-                <td>C</td>
-                <td>D</td>
-                <td>E</td>
-                <td>F</td>
-                <td>G</td>
-                <td>H</td>
-                <td>I</td>
-                <td>J</td>
-                <td>K</td>
-                <td>L</td>
-                <td>M</td>
-                <td>N</td>
-                <td>O</td>
-                <td>P</td>
-                <td>Q</td>
-                <td>R</td>
-                <td>S</td>
-                <td>T</td>
-                <td>U</td>
-                <td>V</td>
-                <td>W</td>
-                <td>X</td>
-                <td>Y</td>
-                <td>Z</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table> 
-        </div>
-        
+      <div class="table-responsive">
+        <table class="table table-gematria">
+          <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>10</th>
+            <th>11</th>
+            <th>12</th>
+            <th>13</th>
+            <th>14</th>
+            <th>15</th>
+            <th>16</th>
+            <th>17</th>
+            <th>18</th>
+            <th>19</th>
+            <th>20</th>
+            <th>21</th>
+            <th>22</th>
+            <th>23</th>
+            <th>24</th>
+            <th>25</th>
+            <th>26</th>
+            <th>27</th>
+            <th>28</th>
+            <th>29</th>
+            <th>30</th>
+            <th>31</th>
+            <th>32</th>
+            <th>33</th>
+          </tr>
+          <tr>
+            <td>А</td>
+            <td>Б</td>
+            <td>В</td>
+            <td>Г</td>
+            <td>Д</td>
+            <td>Е</td>
+            <td>Ё</td>
+            <td>Ж</td>
+            <td>З</td>
+            <td>И</td>
+            <td>Й</td>
+            <td>К</td>
+            <td>Л</td>
+            <td>М</td>
+            <td>Н</td>
+            <td>О</td>
+            <td>П</td>
+            <td>Р</td>
+            <td>С</td>
+            <td>Т</td>
+            <td>У</td>
+            <td>Ф</td>
+            <td>Х</td>
+            <td>Ц</td>
+            <td>Ч</td>
+            <td>Ш</td>
+            <td>Щ</td>
+            <td>Ъ</td>
+            <td>Ы</td>
+            <td>Ь</td>
+            <td>Э</td>
+            <td>Ю</td>
+            <td>Я</td>
+          </tr>
+          <tr>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+            <td>J</td>
+            <td>K</td>
+            <td>L</td>
+            <td>M</td>
+            <td>N</td>
+            <td>O</td>
+            <td>P</td>
+            <td>Q</td>
+            <td>R</td>
+            <td>S</td>
+            <td>T</td>
+            <td>U</td>
+            <td>V</td>
+            <td>W</td>
+            <td>X</td>
+            <td>Y</td>
+            <td>Z</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
     </div>
-</div>
-</div>
-</main>
+  </main>
 </body>
 </html>
